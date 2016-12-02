@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Alien Encounter Mobile</title>
+<link rel="stylesheet" href="css/themes/AlienAbduction.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/themes/contactForm.css">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/siteScripts.js"></script>
+</head>
+
+<body>
+
+<div data-role="page" id="home">
+    <header data-role="header">
+        <h1>Home</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home"
+                class="ui-btn-active" data-theme="a">Home</a></li>
+                <li><a href="#encounters" data-icon="alert" data-theme="a">Encounter Reporting</a></li>
+                <li><a href="#resources" data-icon="info" data-theme="a">Resources</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <h2>Alien Encounters</h2>
+        <p>Welcome ot the Alien Encounters mobile site!<br>
+        Use the links above to either report an encounter or learn more about them!
+        
+        </p>
+    </section>
+    <footer data-role="footer"><h4>&copy; 2015</h4></footer>
+</div>
+
+
+
+<div data-role="page" id="encounters">
+    <header data-role="header">
+        <h1>Alien Encounters</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home"
+                class="ui-btn-active" data-theme="a">Home</a></li>
+                <li><a href="#encounters" data-icon="alert" data-theme="a">Encounter Reporting</a></li>
+                <li><a href="#resources" data-icon="info" data-theme="a">Resources</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <p style="padding-bottom: 50px; font-weight: bold; text-align: center;">
+    <a href="#contactForm">~ Tell Us About Your Encounter ~</a></p>
+        <form id="contactForm" action="processForm.php" method="post">
+<h2>Send us an email...</h2>
+  <ul>
+    <li>
+        <label for="senderName">Your Name</label>
+        <input type="text" name="senderName" id="senderName"        placeholder="Please type your name" required="required" maxlength="40" />
+    </li>
+    <li>
+        <label for="senderEmail">Your Email Address</label>
+        <input type="email" name="senderEmail" id="senderEmail" placeholder="Please type your email address" required="required" maxlength="50" />
+    </li>
+    <li>
+        <label for="message" style="padding-top: .5em;">Encounter Info</label>
+        <textarea name="message" id="message" placeholder="Please type your message" required="required" cols="80" rows="10" maxlength="10000">
+        </textarea>
+    </li>
+  </ul>
+  <div id="formButtons">
+    <input type="submit" id="sendMessage" name="sendMessage" value="Send Email" />
+    <input type="button" id="cancel" name="cancel" value="Cancel" />
+  </div>
+</form>
+        <div id="sendingMessage" class="statusMessage">
+    <p>Your message is being sent. Please wait...</p>
+</div>
+
+<div id="successMessage" class="statusMessage">
+    <p>Thanks for sending your message! We'll get back to you shortly.</p>
+</div>
+
+<div id="failureMessage" class="statusMessage">
+    <p>There was a problem sending your message. Please try again.</p>
+</div>
+
+<div id="incompleteMessage" class="statusMessage">
+    <p>Please complete all the fields in the form before sending.</p>
+</div>
+    </section>
+    <footer data-role="footer"><h4>&copy; 2015</h4></footer>
+</div>
+
+
+<div data-role="page" id="resources">
+    <header data-role="header">
+        <h1>Resources</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-icon="home"
+                class="ui-btn-active" data-theme="a">Home</a></li>
+                <li><a href="#encounters" data-icon="alert" data-theme="a">Encounter Reporting</a></li>
+                <li><a href="#resources" data-icon="info" data-theme="a">Resources</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content" id="faqs">
+        <p>The most commonly used classification system is the Hynek Classification System. This system was designed by Dr. J.Allen Hynek to classify sightings of UFOs in the 1950s while he was doing research on UFOs for the U.S. military. Click on an Encounter Type below to learn more about each.</p>
+        
+        <h2>Nocturnal light</h2>
+        <div class="content">
+        <p>Any anomalous light(s) seen in the night sky whose description rules out the possibility of aircraft lights,
+        stars, meteors, and the like</p>
+        </div>
+        
+        <h2>Daylight Disk UFOs</h2>
+        <div class="content">
+        <p>Seen in the distant daytime sky. The UFOs classified in this category can be other shapes as well, like cigars,
+        eggs, and ovals.</p>
+        </div>
+
+        <h2>Radar Visuals</h2>
+        <div class="content">
+        <p>Where UFOs are tracked on radar and can be seen at the place illustrated at the same time. A good example would
+        be a disk-shaped object going nine thousand miles per hour and showing up on radar in 1950 when the world speed
+        record was only 650 miles per hour.</p>
+        </div>
+        
+        <h2>Close Encounters Of The First Kind</h2>
+        <div class="content">
+        <p>A UFO in close proximity (within approximately 500 feet) of the witness.</p>
+        </div>
+        
+        <h2>Close Encounters Of The Second Kind</h2>
+        <div class="content">
+        <p>A UFO that leaves markings on the ground, causes burns or paralysis to humans, frightens animals, or interferes with car engines or TV and radio reception.</p>
+        </div>
+        
+        <h2>Close Encounters Of The Third Kind</h2>
+        <div class="content">
+        <p>A UFO which has visible occupants</p>
+        </div>
+        
+        <h2>Close Encounters Of the Fourth Kind</h2>
+        <div class="content">
+        <p>These include alien abduction cases.</p>
+        </div>
+        
+        <h2>Close Encounters Of The Fifth Kind</h2>
+        <div class="content">
+        <p>Where communication occurs between a human and an alien being.</p>
+        </div>
+    </section>
+<footer data-role="footer"><h4>&copy; 2015</h4></footer>
+</div>
+</body>
+</html>

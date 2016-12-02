@@ -1,0 +1,88 @@
+#contactForm, .statusMessage, input[type="submit"], input[type="button"] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+  border-radius: 10px;
+}
+
+#contactForm, .statusMessage {
+  color: #666;
+  background-color: #ebedf2;
+  background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
+  background: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );  
+  border: 1px solid #aaa;
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  opacity: .95;
+}
+
+#contactForm {
+  width:device-width;
+}
+
+
+#contactForm.positioned {
+  position: relative
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#contactForm h2 {
+  font-size: 2em;
+  font-style: italic;
+  letter-spacing: .05em;
+  width: device-width;  
+  color: #aeb6aa;
+  background: #dfe0e5 url('../../../finalProject/images/beamUp.png') no-repeat 15em -3em; 
+  border-bottom: 1px solid #aaa;
+
+}
+
+#contactForm ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contactForm ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+}
+
+#contactForm input, #contactForm label {
+  line-height: 1em;
+}
+
+#contactForm *:focus {
+  border: 1px solid #66f;
+  outline: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.statusMessage {
+  display: none;
+  margin: auto;
+  width: 30em;
+  height: 2em;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.statusMessage p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.isClicked{
+    display: block;
+}
+.content
+{display: none;}
+
+#faqs h2{
+  border: solid;
+}
